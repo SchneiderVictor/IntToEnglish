@@ -8,7 +8,7 @@
  * > java NumWordConverter <int args ...>
  * args must be between 0 (inclusive) and Integer.toString(Integer.MAX_VALUE)(exclusive)
  */
-final public class NumWordConverter {
+final public class IntToEngTranslator {
     /**
      * checks whether or not there are any input args,
      * they are all integers and they are all between 0 (inclusive)
