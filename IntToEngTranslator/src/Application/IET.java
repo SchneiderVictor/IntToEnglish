@@ -1,14 +1,18 @@
+package Application;
+
+import Conversion.ValuesTranslator;
+
 /**
  * runnable class accessed from command line; allows translation of integers
  * between 0 and 999999999 (inclusive)
  * to their english translations.
  *
  * Usage:
- * > javac NumWordConverter.java
- * > java NumWordConverter <int args ...>
+ * > javac Application/IET.java
+ * > java Application.IET <int args ...>
  * args must be between 0 and 999999999 (inclusive)
  */
-final public class IntToEngTranslator {
+final public class IET {
     /**
      * checks whether or not there are any input args,
      * they are all integers and they are all between 0 and 999999999 (inclusive)
@@ -39,8 +43,10 @@ final public class IntToEngTranslator {
 
         // print out the program specifics if the input args are incorrect
         if ((!anyArgs) || (!totalInputValid) || (!rangesValid)) {
-            System.out.println("Usage: java NumWordConverter <int args ...>\n" +
-                    "\targs between 0 and 999999999 (inclusive)\n");
+            System.out.println("Usage:\n" +
+                    "> javac Application/IET.java\n" +
+                    "> java Application.IET <int args ...>\n" +
+                    "*** args must be between 0 and 999999999 (inclusive)");
         }
 
         return (anyArgs && totalInputValid && rangesValid);

@@ -1,3 +1,5 @@
+package Conversion;
+
 import jdk.nashorn.internal.runtime.regexp.joni.exception.ValueException;
 
 import java.awt.*;
@@ -50,7 +52,7 @@ final class UniqueValuesLibrary extends Container {
      * @return english translation of number
      * @throws ValueException thrown if number is not unique
      */
-    public static String getWordValueOf(int number) throws ValueException {
+    static String getWordValueOf(int number) throws ValueException {
         if (values.containsKey(number)) {
             return values.get(number);
         } else {
@@ -58,7 +60,7 @@ final class UniqueValuesLibrary extends Container {
         }
     }
 
-    public static boolean contains(int number) {
+    static boolean contains(int number) {
         return values.containsKey(number);
     }
 }
